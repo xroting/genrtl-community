@@ -1,0 +1,41 @@
+title: "[Feature Requests] "
+labels: ["type:feature-request", "status:needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Start with the user problem, then describe the feature idea.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem are you trying to solve?
+      placeholder: It is hard to keep assertion generation mandatory during debug.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      placeholder: Add an assertion-armed check before TB or debug execution.
+    validations:
+      required: true
+  - type: textarea
+    id: workflow
+    attributes:
+      label: Your current workflow
+      description: How do you do this today?
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Impact
+      options:
+        - Nice to have
+        - Useful
+        - Important
+        - Critical
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered

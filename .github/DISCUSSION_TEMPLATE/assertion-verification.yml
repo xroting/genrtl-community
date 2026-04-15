@@ -1,0 +1,47 @@
+title: "[Assertion Verification] "
+labels: ["type:assertion", "status:needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this category for assertion, bind, testbench scaffold, and debug-flow discussions.
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Topic
+      options:
+        - Assertion generation
+        - Bind issues
+        - Testbench scaffold
+        - Debug workflow
+        - Simulator integration
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: design_context
+    attributes:
+      label: Design context
+      description: Module or block description and expected behavior.
+    validations:
+      required: true
+  - type: textarea
+    id: assertion_problem
+    attributes:
+      label: What is the assertion or verification problem?
+      description: Describe the exact issue.
+    validations:
+      required: true
+  - type: textarea
+    id: artifacts
+    attributes:
+      label: Relevant snippets
+      description: Sanitized assertion, bind, or log snippets.
+      render: systemverilog
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected verification outcome
+      description: What should pass or fail?
+    validations:
+      required: true

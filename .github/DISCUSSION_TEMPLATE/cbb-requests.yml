@@ -1,0 +1,45 @@
+title: "[CBB Requests] "
+labels: ["type:cbb-request", "status:needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this category to request new reusable IP or CBB modules.
+  - type: input
+    id: module_name
+    attributes:
+      label: Requested module name
+      placeholder: AXI4-Lite slave / UART / SPI master / Async FIFO
+    validations:
+      required: true
+  - type: textarea
+    id: use_case
+    attributes:
+      label: Use case
+      description: What project or workflow needs this CBB?
+    validations:
+      required: true
+  - type: textarea
+    id: interface
+    attributes:
+      label: Expected interface
+      description: Ports, bus protocol, clock and reset, parameters, widths.
+      placeholder: |
+        clk, rst_n
+        s_axi_awaddr[31:0]
+        s_axi_wdata[31:0]
+        ...
+    validations:
+      required: true
+  - type: textarea
+    id: requirements
+    attributes:
+      label: Functional requirements
+      description: Timing, latency, throughput, corner cases, and error handling.
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: Verification expectations
+      description: Assertions, TB style, protocol checks, or compliance needs.

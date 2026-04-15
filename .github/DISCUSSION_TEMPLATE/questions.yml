@@ -1,0 +1,55 @@
+title: "[Questions] "
+labels: ["type:question", "status:needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for opening a genRTL question.
+
+        State the task, what you tried, and what result you expected.
+  - type: dropdown
+    id: topic
+    attributes:
+      label: Topic
+      options:
+        - Prompting
+        - Agent workflow
+        - CBB usage
+        - Assertion usage
+        - Installation / login
+        - Billing / account
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: goal
+    attributes:
+      label: What are you trying to do?
+      description: Describe the task you want genRTL to help with.
+      placeholder: I want genRTL to generate a UART RX with configurable baud rate.
+    validations:
+      required: true
+  - type: textarea
+    id: tried
+    attributes:
+      label: What have you tried?
+      description: Prompt, config, files, or steps you already tried.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+      description: What result did you expect?
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: genRTL version / extension version
+      placeholder: 0.5.x / extension x.y.z
+  - type: input
+    id: environment
+    attributes:
+      label: OS / environment
+      placeholder: Windows 11 / Ubuntu 22.04 / macOS

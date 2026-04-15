@@ -1,0 +1,71 @@
+title: "[Troubleshooting] "
+labels: ["type:troubleshooting", "status:needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        For faster triage, provide a minimal reproducible example when possible.
+
+        Do not paste private RTL, secrets, billing details, or customer data.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected area
+      options:
+        - App launch / installation
+        - Login / auth
+        - Chat / agent
+        - Model call
+        - File tool / workspace
+        - CBB
+        - Assertion / bind / TB
+        - Backend / API
+        - Network / proxy
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Describe the failure clearly.
+      placeholder: The chat stops after reading files and never resumes.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      value: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / error messages
+      description: Paste sanitized logs only.
+      render: shell
+  - type: input
+    id: version
+    attributes:
+      label: genRTL version / extension version
+  - type: input
+    id: os
+    attributes:
+      label: OS / runtime
+      placeholder: Windows 11 / Ubuntu 22.04 / macOS
+  - type: checkboxes
+    attributes:
+      label: Confirmation
+      options:
+        - label: I removed private code, secrets, and billing information.
+          required: true
